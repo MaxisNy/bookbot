@@ -17,9 +17,12 @@ def dict_to_list(d: dict):
 
 def main():
 
-    # file path passed as an argument
-    # file_path = sys.argv[1]
-    file_path = "books/frankenstein.txt"    # hardcoded for testing purposes
+    try:
+        # file path passed as an argument
+        file_path = sys.argv[1]
+    except IndexError:
+        file_path = "books/frankenstein.txt"
+        
     # initialize an empty dictionary for characters
     char_dict = {}
 
